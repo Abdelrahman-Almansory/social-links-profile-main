@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* Colors */
+    --clr--pm--green: hsl(75, 94%, 57%);
+    --clr--pm--white: hsl(0, 0%, 100%);
+
+    --clr--grey700: hsl(0, 0%, 20%);
+    --clr--grey800: hsl(0, 0%, 12%);
+    --clr--grey900: hsl(0, 0%, 8%);
+    /* fOntfamily */
+    --ff--inter: "Inter", serif;
+    /* Font weight */
+    --fw--sm: 400;
+    --fw--lg: 600;
+    --fw--xl: 700;
+}
+
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body {
+    background-color: var(--clr--grey900);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.social-card-container {
+    margin-inline: auto;
+    padding: 2rem;
+    background-color: var(--clr--grey800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: var(--clr--pm--white);
+    font-family: var(--ff--inter);
+    font-size: 0.8rem;
+    font-weight: var(--fw--sm);
+}
+
+.social-card__profile {
+    width: 5rem;
+}
+
+.social-card__image {
+    border-radius: 50%;
+}
+
+.social-card__name {
+    font-size: 1.4rem;
+    font-weight: var(--fw--xl);
+}
+
+.social-card__address {
+    color: var(--clr--pm--green);
+}
+
+.btn {
+    background-color: var(--clr--grey700);
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5em;
+    color: var(--clr--pm--white);
+    font-weight: var(--fw--lg);
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.btn:hover {
+    background-color: var(--clr--pm--green);
+    color: var(--clr--grey900);
+}
